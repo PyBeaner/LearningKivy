@@ -12,7 +12,7 @@ class RootWidget(FloatLayout):
         self.add_widget(
             Button(
                 text="Hello World",
-                size_hint=(.5,.5),
+                size_hint=(.5, .5),
                 pos_hint={"center_x": .5, "center_y": .5}
             )
         )
@@ -21,17 +21,18 @@ class RootWidget(FloatLayout):
 class MainApp(App):
     def build(self):
         self.root = root = RootWidget()
-        root.bind(size=self._update_rect,pos=self._update_rect)
+        root.bind(size=self._update_rect, pos=self._update_rect)
 
         with root.canvas.before:
-            Color(0,1,0,1) # green
-            self.rect = Rectangle(size=root.size,pos=root.pos)
+            Color(0, 1, 0, 1)  # green
+            self.rect = Rectangle(size=root.size, pos=root.pos)
 
         return root
 
-    def _update_rect(self,instance,value):
+    def _update_rect(self, instance, value):
         self.rect.pos = instance.pos
         self.rect.size = instance.size
 
-if __name__=="__main__":
+
+if __name__ == "__main__":
     MainApp().run()
