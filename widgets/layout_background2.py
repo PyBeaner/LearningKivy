@@ -37,12 +37,12 @@ class MainApp(App):
             )
         )
         root.add_widget(AsyncImage(
-            source="http://www.stuffistumbledupon.com/wp-content/uploads/2012/05/Have-you-seen-this-dog-because-its-awesome-meme-puppy-doggy.jpg"
+            source="http://cdn.duitang.com/uploads/item/201205/27/20120527203226_FT4Bd.thumb.600_0.jpeg"
         ))
         c = CustomerLayout()
         c.add_widget(
             AsyncImage(
-                source="http://www.stuffistumbledupon.com/wp-content/uploads/2012/04/Get-a-Girlfriend-Meme-empty-wallet.jpg",
+                source="http://www.people.com.cn/mediafile/pic/20131210/32/9272984034624909268.jpg",
                 size_hint=(1, .5),
                 pos_hint={'center_x': .5, 'center_y': .5}
             )
