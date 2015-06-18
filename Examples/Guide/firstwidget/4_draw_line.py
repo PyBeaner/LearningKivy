@@ -10,6 +10,7 @@ class MyPaintWidget(Widget):
             Color(1, 1, 0)
             d = 10.
             Ellipse(pos=(touch.x - d / 2, touch.y - d / 2), size=(d, d))
+            # ud:UserData ,use this to save your own data on the touch
             touch.ud["line"] = Line(points=(touch.x,touch.y))
 
     def on_touch_move(self, touch):
